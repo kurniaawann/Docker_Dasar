@@ -49,6 +49,6 @@ docker image rm redis:lastest
 
 **Status Container**
 
-Saat kita membuat container, secara default container tersebut tidak akan berjalan
-Mirip seperti kita menginstall aplikasi, jika tidak kita jalankan maka aplikasi tersebut tidak akan berjalan, begitu juga dengan container
-Oleh karena itu, setelah kita membuat container, Kita perlu menjalankan jika memang ingin di jalankan
+-Saat kita membuat container, secara default container tersebut tidak akan berjalan
+-Mirip seperti kita menginstall aplikasi, jika tidak kita jalankan maka aplikasi tersebut tidak akan berjalan, begitu juga dengan container
+-Oleh karena itu, setelah kita membuat container, Kita perlu menjalankan jika memang ingin di jalankan
