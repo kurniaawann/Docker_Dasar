@@ -43,6 +43,7 @@ docker image rm redis:lastest
 **jika kita sudah membuat docker container maka docker image yang digunakan tidak bisa di hapus, hal ini karena sebenarnya docker container tiang meng-copy isi docker image tapi hanya menggunakan isinya saja**
 
 **Status Container**
+
 Saat kita membuat container, secara default container tersebut tidak akan berjalan
 Mirip seperti kita menginstall aplikasi, jika tidak kita jalankan maka aplikasi tersebut tidak akan berjalan, begitu juga dengan container
 Oleh karena itu, setelah kita membuat container, Kita perlu menjalankan jika memang ingin di jalankan
