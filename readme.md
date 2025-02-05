@@ -99,3 +99,25 @@ docker container logs containerid/namacontainer
 ```bash
 docker container logs -f containerid/namacontainer
 ```
+
+# ![Docker Container Exec] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+
+**Saat kita membuat container, aplikasi yang terdapat di dalam container hanya bisa di akses dari dalam container**
+
+**oleh karena itu, kadang kita perlu masuk kedalam containernya**
+
+**untuk masuk ke dalam container, kita bisa menggunakan fitur Container exec, dimana digunakan untuk mengeksekusi kode program yang terdapat di dalam container**
+
+**Masuk Ke Container**
+
+- untuk masuk ke dalam container, kita bisa mencoba mengeksekusi program bash script yang terdapat di dalam container dengan bantuan Container Exec:
+
+```bash
+docker container exec -i -t containerid/namacontainer /bin/bash
+```
+
+**-i adalah argument interaktif, menjaga inputan tetap aktif**
+**-t adalah argumen untuk alokasi psuedo-TTY (Terminal Akses)**
+**/bin/bash Contaoh kode program yang terdapat di dalam container**
+
+
