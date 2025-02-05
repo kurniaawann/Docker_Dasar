@@ -117,7 +117,9 @@ docker container exec -i -t containerid/namacontainer /bin/bash
 ```
 
 **-i adalah argument interaktif, menjaga inputan tetap aktif**
+
 **-t adalah argumen untuk alokasi psuedo-TTY (Terminal Akses)**
+
 **/bin/bash Contaoh kode program yang terdapat di dalam container**
 
 
