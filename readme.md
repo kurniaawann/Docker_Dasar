@@ -24,20 +24,8 @@ docker image ls
 docker image pull namaimage:tag
 ```
 
-**Contoh**
-```bash
-docker image pull redis:latest
-```
-
-**Perintah untuk mehapus docker image**
-
 ```bash
 docker image rm namaimage:tag
-```
-
-**Contoh**
-```bash
-docker image rm redis:lastest
 ```
 
 # ![Docker Container] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
@@ -54,3 +42,43 @@ docker image rm redis:lastest
 -Mirip seperti kita menginstall aplikasi, jika tidak kita jalankan maka aplikasi tersebut tidak akan berjalan, begitu juga dengan container
 
 -Oleh karena itu, setelah kita membuat container, Kita perlu menjalankan jika memang ingin di jalankan
+
+**Melihat Container**
+untuk melihat semua container, baik sedang berjalan atau tidak di docker daemon, kita bisa ginakan perintah:
+
+```bash
+docker container ls -a
+```
+
+sedangkan jika kita ingin melihat container yang sedang berjalan saja, kita bisa gunakan perintah:
+
+```bash
+docker container ls
+```
+
+**Membuat Container**
+untuk membuat container kita bisa gunakan perintah:
+
+```bash
+docker container create --name namacontainer namaimage:tag
+```
+
+**Menjalankan Container**
+
+```bash
+docker container start namacontainer
+```
+
+**Menghentikan Container**
+
+jika container ingin di hapus maka harus menghentikan containernya terlebih dahulu
+
+```bash
+docker container stop containerid/namacontainer
+```
+
+**Menghapus Container**
+
+```bash
+docker container rm namacontainer
+```
