@@ -37,11 +37,11 @@ docker image rm namaimage:tag
 
 **Status Container**
 
--Saat kita membuat container, secara default container tersebut tidak akan berjalan
+- Saat kita membuat container, secara default container tersebut tidak akan berjalan
 
--Mirip seperti kita menginstall aplikasi, jika tidak kita jalankan maka aplikasi tersebut tidak akan berjalan, begitu juga dengan container
+- Mirip seperti kita menginstall aplikasi, jika tidak kita jalankan maka aplikasi tersebut tidak akan berjalan, begitu juga dengan container
 
--Oleh karena itu, setelah kita membuat container, Kita perlu menjalankan jika memang ingin di jalankan
+- Oleh karena itu, setelah kita membuat container, Kita perlu menjalankan jika memang ingin di jalankan
 
 **Melihat Container**
 untuk melihat semua container, baik sedang berjalan atau tidak di docker daemon, kita bisa ginakan perintah:
