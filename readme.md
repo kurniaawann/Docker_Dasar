@@ -82,3 +82,20 @@ docker container stop containerid/namacontainer
 ```bash
 docker container rm namacontainer
 ```
+# ![Docker Container Log] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+
+**kadang saat terjadi masalah dengan aplikasi yang terdapat di container, sering kali kita ingin melihat detail dari log aplikasinya**
+
+**Hal ini dilakukan untuk melihat detail kejadian apa yang terjadi di aplikasi kita, sehingga untuk mempermudah ketika kita mendapatkan masalah**
+
+**melihat log**
+
+```bash
+docker container logs containerid/namacontainer
+```
+
+**melihat log secara realtime**
+
+```bash
+docker container logs -f containerid/namacontainer
+```
