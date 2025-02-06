@@ -163,6 +163,18 @@ docker container create --name namacontainer --publish posthost:portcontainer im
 docker container create --name namacontainer 1  --env KEY="value" --env KEY2="value" image:tag
 ```
 
+# ![Docker Container Stats] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+
+**Saat menjalankan beberapa container, di sistem Host, penggunaan resource seperti CPU dan Memory hanya terlihat digunakan oleh Docker saja**
+
+**Kadang kita ingin melihat detail dari penggunaan resource untuk tiap container nya**
+
+**Untungnya docker memiliki kemampuan untuk melihat penggunaan resource dari tiap container yang sedang berjalan**
+
+```bash
+docker container stats
+```
+
 
 
 
