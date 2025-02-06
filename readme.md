@@ -122,4 +122,32 @@ docker container exec -i -t containerid/namacontainer /bin/bash
 
 **/bin/bash Contaoh kode program yang terdapat di dalam container**
 
+# ![Docker Container Port] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+
+**saat menjalankan container, container tersebut terisolasi di dalam Docker**
+
+**artinya sistem host (contoh laptop kita), tidak bisa mengakses aplikasi yang ada di dalam container secara langsung, salah satu caranya adalah menggunakan Container Exec untuk masuk ke dalam containernya**
+
+**Biasanya sebuah aplikasi berjalan pada port tertentu, misal saat kita menjalankan aplikasi redis, dia berjalan pada port 6379, kita bisa melihat port apa yang digunakan ketika melihat semua daftar container**
+
+**Port Forwarding**
+
+- Docker memiliki kemampuan untuk melakukan port forwarding, yaitu meneruskan sebuah port yang terdapat di sistem Host nya ke dalam Docker Container.
+- Cara ini cocok jika kita ingin mengekspos port yang terdapat di container ke luar melalui sistem Host nya.
+
+**Melakukan Port Forwarding**
+
+- Untuk melakukan port forwarding, kita bisa menggunakan perintah berikut ketika membuat container nya:
+
+```bash
+docker container create --name namacontainer --publish posthost:portcontainer image:tag
+```
+
+- Jika kita ingin melakukan port forwarding lebih dari satu, kita bisa tambahkan dua kali parameter --publish
+
+- --publish juga bisa disingkat menggunakan -p
+
+
+
+
 
