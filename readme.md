@@ -271,7 +271,12 @@ docker volume rm namavolume
 
 **Cara menggunakan 1  volume di container sama dengan menggunakan bind mount, kita bisa menggunakan parameter --mount, namun dengan menggunakan type volume dan source nama volume. 2**
 
-****
+**jadi docker volume ini akan menjaga data docker kita agar tetap aman walaupun nantinya container kita terhapus**
+
+```bash
+docker container create --name mongovolume --publish 27019:27017 --mount "type=volume,source=mongodata,destination=/data/db" --env MONGO_INITDB_ROOT_USERNAME=UserName --env MONGO_INITDB_ROOT_PASSWORD=UserName mongo:latest
+b762999ae2537a344747ade4c165f11b8f4feff1708a9c69dda14c37839a8d19
+```
 
 
 
