@@ -201,5 +201,74 @@ docker container stats
 docker container create --name smallnginx --publish 8081:80 --memory 100m --cpus 0.5 nginx:latest
 ```
 
+# ![Docker Bind Mounts] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+
+**Bind Mounts merupakan kemampuan melakukan mounting (sharing) file atau folder yang terdapat di sistem host ke container yang terdapat di docker**
+
+**Fitur ini sangat berguna ketika misal kita ingin mengirim konfigurasi dari luar container, atau misal menyimpan data yang dibuat di aplikasi di dalam container ke dalam folder di sistem host**
+
+**Jika file atau folder tidak ada di sistem host, secara otomatis akan dibuatkan oleh Docker**
+
+**Untuk melakukan mounting, kita bisa menggunakan parameter --mount ketika membuat container.**
+
+**Isi dari parameter --mount memiliki aturan tersendiri.**
+
+**jadi ketika kita membuat data di docker nah kita mau data yang sudah kita buat di sebuah container harus tetap ada walaupun containernya kita hapus kita bisa menggunakan docker bind mounts ini**
+
+**Parameter Mount**
+- type : Tipe mount, bind atau volume
+- source: Lokasi file atau folder di sistem host
+- destination: Lokasi file atau folder di container
+- readonly: Jika ada, maka file atau folder hanya bisa dibaca di container, tidak bisa ditulis
+
+**Untuk melakukan mounting kita bisa gunakan perintah**
+
+```bash
+docker container create --name namacontainer --mount "type=bind,source=folderSistemOperasiKita,destination=folderDocker,readonly" image:tag
+```
+
+# ![Docker Volume] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+
+**Fitur Bind Mounts sudah ada sejak Docker versi awal, di versi terbaru direkomendasikan menggunakan Docker Volume**
+
+**Docker Volume mirip dengan Bind Mounts, bedanya adalah terdapat management Volume, dimana kita bisa membuat Volume, melihat daftar Volume, dan menghapus Volume**
+
+**Volume sendiri bisa dianggap storage yang digunakan untuk menyimpan data, bedanya dengan Bind Mounts, pada bind mounts, data disimpan pada sistem host, sedangkan pada volume, data di manage oleh Docker**
+
+**Melihat Docker Volume**
+
+- Saat kita membuat container, dimanakah data di dalam container itu disimpan, secara default semua data container disimpan di dalam volume.
+
+- Jika kita coba melihat docker volume, kita akan lihat bahwa ada banyak volume yang sudah terbuat, walaupun kita belum pernah membuatnya sama sekali
+
+- Kita 1  bisa gunakan perintah berikut untuk melihat daftar volume
+
+```bash
+docker volume ls
+```
+
+**Membuat Volume**
+
+- Untuk membuat volume gunakan perintah
+
+```bash
+docker volume create namavolume
+```
+
+**Menghapus Volume**
+
+- pastika volume tidak di gunakan oleh container
+
+```bash
+docker volume rm namavolume
+```
+
+
+
+
+
+
+
+
 
 
