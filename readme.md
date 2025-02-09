@@ -213,7 +213,7 @@ docker container create --name smallnginx --publish 8081:80 --memory 100m --cpus
 
 **Isi dari parameter --mount memiliki aturan tersendiri.**
 
-**jadi ketika kita membuat data di docker nah kita mau data yang sudah kita buat di sebuah container harus tetap ada walaupun containernya kita hapus kita bisa menggunakan docker bind mounts ini**
+**jadi ketika kita membuat data di docker nah kita mau data yang sudah kita buat di sebuah container harus tetap ada walaupun containernya kita hapus kita bisa menggunakan docker bind mounts ini tapi ini akan disimpan di local kita**
 
 **Parameter Mount**
 - type : Tipe mount, bind atau volume
@@ -263,6 +263,15 @@ docker volume create namavolume
 docker volume rm namavolume
 ```
 
+# ![Docker Container Volume] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+
+**Volume yang sudah kita buat, bisa kita gunakan di container.**
+
+**Keuntungan menggunakan volume adalah, jika container kita hapus, data akan tetap aman di volume**
+
+**Cara menggunakan 1  volume di container sama dengan menggunakan bind mount, kita bisa menggunakan parameter --mount, namun dengan menggunakan type volume dan source nama volume. 2**
+
+****
 
 
 
