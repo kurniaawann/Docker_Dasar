@@ -1,11 +1,11 @@
-# ![Docker Registry] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+# [Docker Registry] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
 **Docker Registy adalah tempat untuk menyimpan docker image Docker Registry memungkinkan kita menyimpan image Docker dan menggunakannya di mana saja.**
 
 **Docker Hub ini adalah tempat untuk menyimpan image di cloud jadi kita bisa mengakses image milik orang lain selain itu docker hub juga gratis**
 
 **Docker Hub https://hub.docker.com/**
 
-# ![Docker Image] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+# [Docker Image] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
 **Docker Image mirip seperti installer aplikasi, dimana di dalam Docker Image terdapat aplikasi dan dependency**
 
 **Sebelum kita bisa menjalankan aplikasi di Docker, kita perlu memastikan memiliki Docker Image aplikasi tersebut**
@@ -28,7 +28,7 @@ docker image pull namaimage:tag
 docker image rm namaimage:tag
 ```
 
-# ![Docker Container] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+# [Docker Container] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
 **Jika docker image seperti install aplikasi, maka docker container mirip seperti hasil installer**
 
 **Satu docker image bisa digunakan untuk membuat beberapa Docker Container asalkan nama containernya berbeda**
@@ -82,7 +82,7 @@ docker container stop containerid/namacontainer
 ```bash
 docker container rm namacontainer
 ```
-# ![Docker Container Log] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+# [Docker Container Log] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
 
 **kadang saat terjadi masalah dengan aplikasi yang terdapat di container, sering kali kita ingin melihat detail dari log aplikasinya**
 
@@ -100,7 +100,7 @@ docker container logs containerid/namacontainer
 docker container logs -f containerid/namacontainer
 ```
 
-# ![Docker Container Exec] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+# [Docker Container Exec] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
 
 **Saat kita membuat container, aplikasi yang terdapat di dalam container hanya bisa di akses dari dalam container**
 
@@ -122,7 +122,7 @@ docker container exec -i -t containerid/namacontainer /bin/bash
 
 **/bin/bash Contaoh kode program yang terdapat di dalam container**
 
-# ![Docker Container Port] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+# [Docker Container Port] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
 
 **saat menjalankan container, container tersebut terisolasi di dalam Docker**
 
@@ -147,7 +147,7 @@ docker container create --name namacontainer --publish posthost:portcontainer im
 
 - --publish juga bisa disingkat menggunakan -p
 
-# ![Docker Container Environment Variabel] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+# [Docker Container Environment Variabel] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
 
 **Saat membuat aplikasi, menggunakan Environment Variable adalah salah satu teknik agar konfigurasi aplikasi bisa diubah secara dinamis**
 
@@ -163,7 +163,7 @@ docker container create --name namacontainer --publish posthost:portcontainer im
 docker container create --name namacontainer 1  --env KEY="value" --env KEY2="value" image:tag
 ```
 
-# ![Docker Container Stats] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+# [Docker Container Stats] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
 
 **Saat menjalankan beberapa container, di sistem Host, penggunaan resource seperti CPU dan Memory hanya terlihat digunakan oleh Docker saja**
 
@@ -175,7 +175,7 @@ docker container create --name namacontainer 1  --env KEY="value" --env KEY2="va
 docker container stats
 ```
 
-# ![Docker Container Resource Limit] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+# [Docker Container Resource Limit] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
 
 **Saat membuat container, secara default dia akan menggunakan semua CPU dan Memory yang diberikan ke Docker (Mac dan Windows), dan akan menggunakan semua CPU dan Memory yang tersedia di sistem Host (Linux)**
 
@@ -201,7 +201,7 @@ docker container stats
 docker container create --name smallnginx --publish 8081:80 --memory 100m --cpus 0.5 nginx:latest
 ```
 
-# ![Docker Bind Mounts] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+# [Docker Bind Mounts] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
 
 **Bind Mounts merupakan kemampuan melakukan mounting (sharing) file atau folder yang terdapat di sistem host ke container yang terdapat di docker**
 
@@ -227,7 +227,7 @@ docker container create --name smallnginx --publish 8081:80 --memory 100m --cpus
 docker container create --name namacontainer --mount "type=bind,source=folderSistemOperasiKita,destination=folderDocker,readonly" image:tag
 ```
 
-# ![Docker Volume] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+# [Docker Volume] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
 
 **Fitur Bind Mounts sudah ada sejak Docker versi awal, di versi terbaru direkomendasikan menggunakan Docker Volume**
 
@@ -263,7 +263,7 @@ docker volume create namavolume
 docker volume rm namavolume
 ```
 
-# ![Docker Container Volume] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+# [Docker Container Volume] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
 
 **Volume yang sudah kita buat, bisa kita gunakan di container.**
 
