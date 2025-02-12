@@ -278,6 +278,50 @@ docker container create --name mongovolume --publish 27019:27017 --mount "type=v
 b762999ae2537a344747ade4c165f11b8f4feff1708a9c69dda14c37839a8d19
 ```
 
+# [Docker Backup Volume] <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" width="50">
+
+**Sayangnya, sampai saat ini, tidak ada cara otomatis melakukan backup volume yang sudah kita buat.**
+
+**Namun kita bisa memanfaatkan container untuk melakukan backup data yang ada di dalam volume ke dalam archive seperti zip atau tar.gz**
+
+**Tahapan Melakukan Backup**
+
+- Matikan container yang menggunakan volume yang ingin kita backup.
+
+- Buat container baru dengan dua mount, volume yang ingin kita backup, dan bind mount folder dari sistem host. 
+
+- Lakukan backup menggunakan container dengan cara meng-archive isi volume, dan simpan di bind mount folder.
+
+- Isi file backup sekarang ada di folder sistem host.
+
+- Delete container yang kita gunakan untuk melakukan backup.
+
+**Contoh**
+
+- Alamat di local kita saat mau melakukan backup
+D:\Docker\backup
+d
+
+```bash
+docker container create --name mongovolumebackup --mount "type=bind,source=D:\Docker\backup,destination=/backup" --mount "type=volume,source=mongodata,destination=/data" mongo:latest
+```
+- Jalankan Container
+
+- Lalu Masuk Ke Container Backup
+
+```bash
+docker container exec -i -t mongovolumebackup /bin/bash
+```
+- Masuk Ke folder Backup
+
+```bash
+cd /backup
+```
+
+- Perintah Melakukan Backup
+
+```bash
+tar cvf /backup/backup.tar.gz /data
 
 
 
