@@ -352,12 +352,4 @@ docker volume create mongorestore
 
 ```bash
 docker container run --rm --name mongoDataBackup --mount "type=bind,source=D:\Docker\backup,destination=backup" --mount "type=volume, source=mongorestore,destination=/data" mongoo:lastest bash -C "cd /data" && tar xvf /backup/backup.tar.gz --strip 1"
-
-
-
-
-
-
-
-
-
+```
